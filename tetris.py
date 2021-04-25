@@ -151,7 +151,9 @@ def create_grid(locked_pos = {}):
             for j in range(len(grid[i])):
                   if j(j, i) in locked_pos:
                         c = locked_pos[(j,i)]
-                        grid[i][j]
+                        grid[i][j] = c
+      
+      return grid
 
 
 
@@ -166,14 +168,24 @@ def check_lost(positions):
 	pass
 
 def get_shape():
-	pass
+	return random.choice(shapes) 
 
 
 def draw_text_middle(text, size, color, surface):
 	pass
    
 def draw_grid(surface, row, col):
-	pass
+	surface.fill((0,0,0))
+
+      pygame.font.init()
+      font = pygame.font.SysFont('monoserif', 45)
+      label = font.render('funny block game', 1, (255,255,255))
+
+      surface.blit(label, (top_left_x + play_width/2 - label.get_width()/2), 30))
+
+      for i in range(len(grid)):
+            for j in range(len(grid[1])):
+                  pygame.draw.rect(surface, grid[i][j], (top_left_x + j*30, top_left_y+ j*30, top_left_y+ i*block_size, block_size, block_size))
 
 def clear_rows(grid, locked):
       pass
