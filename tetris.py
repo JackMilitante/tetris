@@ -1,14 +1,9 @@
 import pygame
 import random
 
-# creating the data structure for pieces
-# setting up global vars
-# functions
-# - create_grid
-# - draw_grid
-# - draw_window
-# - rotating shape in main
-# - setting up the main
+#get out of my code lolololol
+#sorta sus of you to look at my code innit bruv
+#go commit tokyo ghoul pfp
 
 """
 10 x 20 square grid
@@ -18,18 +13,18 @@ represented in order by 0 - 6
 
 pygame.font.init()
 
-# GLOBALS VARS
+
 s_width = 800
 s_height = 700
-play_width = 300  # meaning 300 // 10 = 30 width per block
-play_height = 600  # meaning 600 // 20 = 20 height per block
+play_width = 300  
+play_height = 600 
 block_size = 30
 
 top_left_x = (s_width - play_width) // 2
 top_left_y = s_height - play_height
 
 
-# SHAPE FORMATS
+# funny shapes
 
 S = [['.....',
       '......',
@@ -135,14 +130,31 @@ T = [['.....',
 
 shapes = [S, Z, I, O, J, L, T]
 shape_colors = [(0, 255, 0), (255, 0, 0), (0, 255, 255), (255, 255, 0), (255, 165, 0), (0, 0, 255), (128, 0, 128)]
-# index 0 - 6 represent shape
+
 
 
 class Piece(object):
-	pass
+	def _init_(self, x, y):
+            self.x = x
+            self.y = y
+            self.shape = shape
+            self.color = shape_colors[shapes.index(shape)]
+            self.rotation = 0
 
-def create_grid(locked_positions={}):
-	pass
+#never gonna give you up
+
+
+def create_grid(locked_pos = {}):
+	grid = [[0,0,0] for _ in range(10)] for _ in range(20)]
+      
+      for i in range(len(grid)):
+            for j in range(len(grid[i])):
+                  if j(j, i) in locked_pos:
+                        c = locked_pos[(j,i)]
+                        grid[i][j]
+
+
+
 
 def convert_shape_format(shape):
 	pass
@@ -164,10 +176,10 @@ def draw_grid(surface, row, col):
 	pass
 
 def clear_rows(grid, locked):
-
+      pass
 
 def draw_next_shape(shape, surface):
-
+      pass
 
 def draw_window(surface):
 	pass
@@ -178,4 +190,7 @@ def main():
 def main_menu():
 	pass
 
-main_menu()  # start game
+main_menu()  #the game work with dis thing here lol why are you looking at my code
+
+
+#we used a freecodecamp tutorial no get mad at us
